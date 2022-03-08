@@ -1,0 +1,36 @@
+<% if (locals.errors) {%>
+    <% errors.forEach((err)=> {%>
+        <div class="alert alert-danger">
+                <%= err.msg%>
+        </div>
+    <%})%>
+<%}%>
+
+<% /* console.log(locals) */ %> 
+<% if (locals.message && message !="") {%>
+         
+    <div class="alert alert-success">
+            <%= message%>
+    </div>
+  <%}%>  
+
+
+<% if (locals.signupError && signupError !=""){%>   
+    <div class="alert alert-danger">
+            <%=signupError%>
+    </div>
+  <%}%>  
+
+<% if (locals.loginError && loginError !=""){%>   
+        <div class="alert alert-danger">
+        <%=loginError%>
+        </div>
+      <%}%>  
+
+<% if (locals.success && success !="") {%>
+    <div class="alert alert-success">
+            <%= success%>
+    </div>
+  <%}%>  
+
+
